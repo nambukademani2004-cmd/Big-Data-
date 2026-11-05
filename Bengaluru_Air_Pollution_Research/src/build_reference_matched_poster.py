@@ -646,7 +646,7 @@ def create_reference_matched_poster():
     f_divider.line.fill.background()
 
     # Footer Left: References & Data Sources
-    tb_f_left = slide.shapes.add_textbox(Inches(0.90), footer_y + Inches(0.12), Inches(30.00), footer_h - Inches(0.24))
+    tb_f_left = slide.shapes.add_textbox(Inches(0.90), footer_y + Inches(0.12), Inches(26.00), footer_h - Inches(0.24))
     tf_fl = tb_f_left.text_frame
     tf_fl.word_wrap = True
 
@@ -665,6 +665,41 @@ def create_reference_matched_poster():
     p_fl2.font.size = Pt(8.8)
     p_fl2.font.color.rgb = COLOR_TEXT_MUTED
     p_fl2.space_before = Pt(2)
+
+    # Footer Center: GitHub Repository QR Code
+    qr_img_path = BASE_DIR.parent / "project_github_qr_code.png"
+    if not qr_img_path.exists():
+        qr_img_path = CHARTS_DIR / "project_qr_code.png"
+
+    if qr_img_path.exists():
+        qr_size = Inches(1.38)
+        qr_x = Inches(27.40)
+        qr_y = footer_y + Inches(0.14)
+
+        # White rounded backing box for high scan contrast
+        qr_bg = slide.shapes.add_shape(MSO_SHAPE.ROUNDED_RECTANGLE, qr_x - Inches(0.06), qr_y - Inches(0.04), qr_size + Inches(0.12), qr_size + Inches(0.08))
+        qr_bg.fill.solid()
+        qr_bg.fill.fore_color.rgb = COLOR_WHITE
+        qr_bg.line.color.rgb = COLOR_BORDER_CYAN
+        qr_bg.line.width = Pt(1.5)
+
+        slide.shapes.add_picture(str(qr_img_path), qr_x, qr_y, width=qr_size, height=qr_size)
+
+        # QR Label text
+        tb_qrl = slide.shapes.add_textbox(qr_x + qr_size + Inches(0.15), qr_y, Inches(2.20), qr_size)
+        tf_ql = tb_qrl.text_frame
+        tf_ql.word_wrap = True
+        tf_ql.margin_left = tf_ql.margin_top = 0
+        p_q1 = tf_ql.paragraphs[0]
+        p_q1.text = "GITHUB CODE"
+        p_q1.font.bold = True
+        p_q1.font.size = Pt(9.5)
+        p_q1.font.color.rgb = COLOR_AMBER
+
+        p_q2 = tf_ql.add_paragraph()
+        p_q2.text = "Scan for PySpark code, master data & figures"
+        p_q2.font.size = Pt(8.2)
+        p_q2.font.color.rgb = COLOR_TEXT_MUTED
 
     # Footer Right: Environmental Awareness & Institutional Branding
     tb_f_right = slide.shapes.add_textbox(Inches(31.40), footer_y + Inches(0.12), Inches(14.50), footer_h - Inches(0.24))
