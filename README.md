@@ -2,15 +2,19 @@
 
 **Academic Research Project**  
 *M.Sc. Data Science Research Dissertation & Academic Poster Presentation*  
-**Author:** Yashaswi A R  
-**Institution:** Chanakya University, Bengaluru  
+**Authors:** Yashaswi A R, T Yashodha, Namrata Kademani  
+**Degree:** M.Sc. Data Science  
+**Institution:** Chanakya University, Bengaluru, Karnataka, India  
 **GitHub Repository:** [https://github.com/nambukademani2004-cmd/Big-Data-](https://github.com/nambukademani2004-cmd/Big-Data-)  
+**Conference:** Lake 2026 Conference  
 **Framework:** Apache Spark / PySpark 4.3.0, Python 3.11, OpenJDK 17 LTS  
 **Temporal Span:** January 1, 2024 – December 31, 2025 (24 Full Months)  
 **Spatial Coverage:** 13 Continuous Air Quality Monitoring Stations (KSPCB / CPCB)  
 
 <p align="center">
-  <img src="project_github_qr_code.png" width="220" alt="GitHub Repository QR Code" />
+  <img src="Final_Poster/Poster_Preview.png" width="95%" alt="Official Academic Research Poster Preview" />
+  <br/>
+  <img src="project_github_qr_code.png" width="200" alt="GitHub Repository QR Code" />
   <br/>
   <b>Scan QR Code to visit Repository:</b> <a href="https://github.com/nambukademani2004-cmd/Big-Data-">https://github.com/nambukademani2004-cmd/Big-Data-</a>
 </p>
