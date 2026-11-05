@@ -1,0 +1,28 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Intermediate files exceeding GitHub 100MB limit
+*.csv.gz
+output/bengaluru_air_quality_cleaned.csv
+bengaluru_air_quality_project/output/bengaluru_air_quality_cleaned.csv
+bengaluru_air_quality_project/output/bengaluru_air_quality_cleaned.xlsx
+bengaluru_air_quality_project/output/bengaluru_integrated_air_quality_weather.csv
+bengaluru_air_quality_project/output/bengaluru_integrated_air_quality_weather.xlsx
+
+# Temporary system / OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
